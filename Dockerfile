@@ -37,6 +37,7 @@ RUN npm install --prefer-offline --no-audit && \
 # ---------- Source code ----------
 # .dockerignore excludes node_modules, so the installs above survive.
 COPY --chown=hermes:hermes . .
+RUN chmod +x docker/entrypoint.sh
 
 # Build web dashboard (Vite outputs to hermes_cli/web_dist/)
 RUN cd web && npm run build

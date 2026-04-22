@@ -6,8 +6,6 @@ HERMES_HOME="/opt/data"
 INSTALL_DIR="/opt/hermes"
 
 # --- Privilege dropping via gosu ---
-# When started as root (the default), optionally remap the hermes user/group
-# to match host-side ownership, fix volume permissions, then re-exec as hermes.
 if [ "$(id -u)" = "0" ]; then
     if [ -n "$HERMES_UID" ] && [ "$HERMES_UID" != "$(id -u hermes)" ]; then
         echo "Changing hermes UID to $HERMES_UID"
@@ -47,6 +45,20 @@ fi
 
 # SOUL.md — always sync from bundled version (persona is deployment-managed, not user-edited)
 cp "$INSTALL_DIR/docker/SOUL.md" "$HERMES_HOME/SOUL.md"
+
+# Apply HERMES_MODEL override — if set, always write it into config.yaml
+if [ -n "$HERMES_MODEL" ] && [ -f "$HERMES_HOME/config.yaml" ]; then
+    echo "Setting model to: $HERMES_MODEL"
+    python3 - <<EOF
+import yaml, sys
+path = "$HERMES_HOME/config.yaml"
+with open(path) as f:
+    cfg = yaml.safe_load(f) or {}
+cfg.setdefault("model", {})["default"] = "$HERMES_MODEL"
+with open(path, "w") as f:
+    yaml.dump(cfg, f, default_flow_style=False, allow_unicode=True)
+EOF
+fi
 
 # Sync bundled skills (manifest-based so user edits are preserved)
 if [ -d "$INSTALL_DIR/skills" ]; then

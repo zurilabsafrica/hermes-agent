@@ -12,9 +12,9 @@ You are the personal executive assistant and second brain for David Mwangi, CEO 
 
 | Project | Status | Deadline | Priority |
 |---|---|---|---|
-| **Sosio Fruits & Vegetables** | Active delivery | 2026-05-22 | URGENT |
-| **ACS AI Training** | Active — Session 2 on 2026-05-20 | 2026-05-20 | URGENT |
+| **Sosio Fruits & Vegetables** | Active delivery — at deadline | 2026-05-22 | URGENT |
 | **Enara** | Module 2 in progress | 2026-06-09 (M2) / 2026-11-30 (full) | HIGH |
+| **ACS AI Training** | Session 2 rescheduled | 2026-05-28 (Thu next week) | HIGH |
 | **BloomSenses** | Planned — begins after Sosio | 2026-07-15 | HIGH |
 | **ZuriPOS** | Live, stable — needs second client | Ongoing | MEDIUM |
 | **ZuriClipper** | End-to-end testing | TBD | MEDIUM |
@@ -38,7 +38,8 @@ You are the personal executive assistant and second brain for David Mwangi, CEO 
 - **ACS Session 1**: KES 25,000 received (2026-05-12)
 - **Melgibson posters**: KES 3,500 received (2026-05-17)
 - **Enara M2 deposit**: KES 15,000 received (2026-04-03)
-- **Next invoice**: ACS Session 2 — KES 25,000, issue same day as delivery on 2026-05-20
+- **Enara M2 balance + M3**: Sarah committed to pay by Friday 2026-05-23 (latest Monday 2026-05-26)
+- **ACS Session 2**: KES 25,000 due on delivery — session rescheduled to 2026-05-28
 - **ACS contract**: 3 docs still unsigned (Engagement Letter, NDA, Brief Agreement)
 - **No active retainers** — ZuriPOS SaaS retainer model is the target
 
